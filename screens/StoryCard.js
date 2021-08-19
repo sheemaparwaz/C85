@@ -42,19 +42,16 @@ export default class StoryCard extends Component {
         <View style={styles.container}>
           <View style={styles.cardContainer}>
             <Image
-              source={require("../assets/story_image_1.png")}
+              source={require("../assets/image_1.jpg")}
               style={styles.storyImage}
             ></Image>
 
             <View style={styles.titleContainer}>
               <Text style={styles.storyTitleText}>
-                {this.props.story.title}
-              </Text>
-              <Text style={styles.storyAuthorText}>
-                {this.props.story.author}
+                {this.props.story.name}
               </Text>
               <Text style={styles.descriptionText}>
-                {this.props.story.description}
+                {this.props.story.caption}
               </Text>
             </View>
             <View style={styles.actionContainer}>
