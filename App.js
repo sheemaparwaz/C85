@@ -1,17 +1,17 @@
 import * as React from 'react';
- import { createSwitchNavigator, createAppContainer } from "react-navigation";
+import { createSwitchNavigator, createAppContainer } from "react-navigation";
 
-  import LoginScreen from "./screens/LoginScreen";
-   import LoadingScreen from "./screens/LoadingScreen";
-    import DashboardScreen from "./screens/DashboardScreen";
+import LoginScreen from "./screens/LoginScreen";
+import LoadingScreen from "./screens/LoadingScreen";
+import DashboardScreen from "./screens/DashboardScreen";
 
-     import  firebase from "firebase"; 
-     import { firebaseConfig } from "./config";
+import firebase from "firebase";
+import { firebaseConfig } from "./config";
 
-if(!firebase.App.lenght){
-   firebase.initializeApp(firebaseConfig)
-}else {
-   firebase.app()
+if (!firebase.App.length) {
+  firebase.initializeApp(firebaseConfig)
+} else {
+  firebase.app()
 }
 
 const AppSwitchNavigator = createSwitchNavigator({
@@ -19,10 +19,10 @@ const AppSwitchNavigator = createSwitchNavigator({
   LoginScreen: LoginScreen,
   DashboardScreen: DashboardScreen
 })
- 
+
 const AppNavigator = createAppContainer(AppSwitchNavigator)
 export default function App() {
   return (
-    <AppNavigator/>
+    <AppNavigator />
   );
 }
